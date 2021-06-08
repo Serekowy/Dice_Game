@@ -11,7 +11,7 @@ namespace Gra_w_kości
     {
         public static int loser(int money)
         {
-            if (money == 0)
+            if (money < 50)
             {
                 Console.WriteLine();
                 Console.WriteLine("Przegrałeś wszystkie Adiks Coiny :(");
