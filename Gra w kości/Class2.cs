@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,16 +9,51 @@ namespace Gra_w_kości
 {
     class Class2
     {
+        public static int loser(int money)
+        {
+            if (money == 0)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Przegrałeś wszystkie Adiks Coiny :(");
+                Console.WriteLine("Dostaniesz 1000 abyś mógł grać dalej :D");
+                Console.WriteLine("Miłej zabawy! Pamiętaj, żeby znowu nie przegrać...");
+                return 1000;
+            }
+            return money;
+        }
+        public static int start(string path)
+        {
+            string name;
+            bool spr;
+            int money;
+
+            if (!File.Exists(path))
+            {
+                Console.Write("Wprowadź swoje imię: ");
+                name = Console.ReadLine();
+                Class1.info(name);
+                File.AppendAllText(path, name + "\n" + 1000);
+                spr = int.TryParse(File.ReadLines(path).Skip(1).Take(1).First(), out money);
+                return money;
+            }
+            else
+            {
+                name = File.ReadLines(path).Skip(0).Take(1).First();
+                Class1.welcome(name);
+                spr = int.TryParse(File.ReadLines(path).Skip(1).Take(1).First(), out money);
+                return money;
+            }
+        }
         public static int result(int pnumber, int pcnumber, int bet)
         {
             if (pnumber > pcnumber)
             {
-                Console.WriteLine($"Wygrywasz! + {bet} AC");
+                Console.WriteLine($"Wygrywasz! +{bet} AC");
                 return bet;
             }
             else if (pnumber < pcnumber)
             {
-                Console.WriteLine($"Niestety, komputer wygrał - {bet} AC ;c");
+                Console.WriteLine($"Niestety, komputer wygrał -{bet} AC ;c");
                 return -bet;
             }
             else

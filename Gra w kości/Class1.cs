@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +8,10 @@ namespace Gra_w_kości
 {
     class Class1
     {
+        public static void welcome(string name)
+        {
+            Console.WriteLine($"Witaj ponownie {name}, życzymy miłej gry.");
+        }
         public static void info(string name)
         {
             Console.Clear();
@@ -21,6 +24,7 @@ namespace Gra_w_kości
             Console.WriteLine("Nie musisz się również martwić, gdy będziesz chciał zakończyć rozgrywkę, ponieważ gra automatycznie się zapisuje oznacza to, że nie stracisz postępu w grze i będziesz mógł wrócić kiedy tylko będziesz chciał z tą samą ilością AC.");
             Console.WriteLine();
             Console.WriteLine("To na tyle w tym dosyć długim, ale jakże treściwym wstępie, mam nadzieję, że gra się spodoba :D");
+            Console.WriteLine();
             Console.ResetColor();
             Console.WriteLine("Aby rozpocząć grę naciśnij dowolny przycisk...");
             Console.ReadKey();
@@ -28,63 +32,63 @@ namespace Gra_w_kości
         }
         public static void dice1()
         {
-            Console.WriteLine("---------------");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-      O      -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("---------------");
+            Console.WriteLine("-------------");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-     O     -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-------------");
         }
         public static void dice2()
         {
-            Console.WriteLine("---------------");
-            Console.WriteLine("-          O  -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-  O          -");
-            Console.WriteLine("---------------");
+            Console.WriteLine("-------------");
+            Console.WriteLine("-        O  -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-  O        -");
+            Console.WriteLine("-------------");
         }
         public static void dice3()
         {
-            Console.WriteLine("---------------");
-            Console.WriteLine("-          O  -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-      O      -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-  O          -");
-            Console.WriteLine("---------------");
+            Console.WriteLine("-------------");
+            Console.WriteLine("-        O  -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-     O     -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-  O        -");
+            Console.WriteLine("-------------");
         }
         public static void dice4()
         {
-            Console.WriteLine("---------------");
-            Console.WriteLine("-  O       O  -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-  O       O  -");
-            Console.WriteLine("---------------");
+            Console.WriteLine("-------------");
+            Console.WriteLine("-  O     O  -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-  O     O  -");
+            Console.WriteLine("-------------");
         }
         public static void dice5()
         {
-            Console.WriteLine("---------------");
-            Console.WriteLine("-  O       O  -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-      O      -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-  O       O  -");
-            Console.WriteLine("---------------");
+            Console.WriteLine("-------------");
+            Console.WriteLine("-  O     O  -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-     O     -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-  O     O  -");
+            Console.WriteLine("-------------");
         }
         public static void dice6()
         {
-            Console.WriteLine("---------------");
-            Console.WriteLine("-  O   O   O  -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-             -");
-            Console.WriteLine("-  O   O   O  -");
-            Console.WriteLine("---------------");
+            Console.WriteLine("-------------");
+            Console.WriteLine("-  O  O  O  -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-           -");
+            Console.WriteLine("-  O  O  O  -");
+            Console.WriteLine("-------------");
         }
     }
 }
