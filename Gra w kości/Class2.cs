@@ -13,7 +13,9 @@ namespace Gra_w_kości
         {
             if (money < 50)
             {
-                Console.WriteLine();
+                Console.ReadKey();
+                Console.Clear();
+                Class1.sadFace();
                 Console.WriteLine("Przegrałeś wszystkie Adiks Coiny :(");
                 Console.WriteLine("Dostaniesz 1000 abyś mógł grać dalej :D");
                 Console.WriteLine("Miłej zabawy! Pamiętaj, żeby znowu nie przegrać...");
@@ -48,17 +50,23 @@ namespace Gra_w_kości
         {
             if (pnumber > pcnumber)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"Wygrywasz! +{bet} AC");
+                Console.ResetColor();
                 return bet;
             }
             else if (pnumber < pcnumber)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"Niestety, komputer wygrał -{bet} AC ;c");
+                Console.ResetColor();
                 return -bet;
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Remis! Adiks Coiny wracają do Ciebie");
+                Console.ResetColor();
                 return 0;
             }
         }
@@ -98,14 +106,30 @@ namespace Gra_w_kości
                 Console.Write("Wpisz ilość Adiks Coinów: ");
                 string pos = Console.ReadLine();
                 spr = int.TryParse(pos, out bet);
-                if (bet < 50)
+                if (spr == false)
                 {
+                    Console.Clear();
+                    Console.WriteLine($"Stan konta: {ac} AC");
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+                    Console.WriteLine("Musisz wprowadzić liczbę.");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                }
+                else if (bet < 50)
+                {
+                    Console.Clear();
+                    Console.WriteLine($"Stan konta: {ac} AC");
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("Minimalna stawka to 50AC.");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
                     spr = false;
                 }
-                if (bet > ac)
+                else if (bet > ac)
                 {
+                    Console.Clear();
+                    Console.WriteLine($"Stan konta: {ac} AC");
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("Nie masz tyle Adiks Coinów.");
+                    Console.ForegroundColor = ConsoleColor.Cyan;
                     spr = false;
                 }
                 continue;

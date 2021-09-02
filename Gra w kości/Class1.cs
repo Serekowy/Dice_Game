@@ -32,6 +32,7 @@ namespace Gra_w_kości
         }
         public static void dice1()
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("-------------");
             Console.WriteLine("-           -");
             Console.WriteLine("-           -");
@@ -39,9 +40,11 @@ namespace Gra_w_kości
             Console.WriteLine("-           -");
             Console.WriteLine("-           -");
             Console.WriteLine("-------------");
+            Console.ResetColor();
         }
         public static void dice2()
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("-------------");
             Console.WriteLine("-        O  -");
             Console.WriteLine("-           -");
@@ -49,9 +52,11 @@ namespace Gra_w_kości
             Console.WriteLine("-           -");
             Console.WriteLine("-  O        -");
             Console.WriteLine("-------------");
+            Console.ResetColor();
         }
         public static void dice3()
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("-------------");
             Console.WriteLine("-        O  -");
             Console.WriteLine("-           -");
@@ -59,9 +64,11 @@ namespace Gra_w_kości
             Console.WriteLine("-           -");
             Console.WriteLine("-  O        -");
             Console.WriteLine("-------------");
+            Console.ResetColor();
         }
         public static void dice4()
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("-------------");
             Console.WriteLine("-  O     O  -");
             Console.WriteLine("-           -");
@@ -69,9 +76,11 @@ namespace Gra_w_kości
             Console.WriteLine("-           -");
             Console.WriteLine("-  O     O  -");
             Console.WriteLine("-------------");
+            Console.ResetColor();
         }
         public static void dice5()
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("-------------");
             Console.WriteLine("-  O     O  -");
             Console.WriteLine("-           -");
@@ -79,9 +88,11 @@ namespace Gra_w_kości
             Console.WriteLine("-           -");
             Console.WriteLine("-  O     O  -");
             Console.WriteLine("-------------");
+            Console.ResetColor();
         }
         public static void dice6()
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("-------------");
             Console.WriteLine("-  O  O  O  -");
             Console.WriteLine("-           -");
@@ -89,6 +100,32 @@ namespace Gra_w_kości
             Console.WriteLine("-           -");
             Console.WriteLine("-  O  O  O  -");
             Console.WriteLine("-------------");
+            Console.ResetColor();
+        }
+        public static void sadFace()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(
+ @"
++---------------------------+
+|                           |
+|                           |
+|                           |
+|   xxxx          xxxxx     |
+|   xxxx          xxxxx     |
+|   xxxx          xxxxx     |
+|   xxxx          xxxxx     |
+|                           |
+|                           |
+|   xxxxxxxxxxxxxx          |
+|   xxxxxxxxxxxxxx          |
+|   xxx         xx          |
+|   xxx         xx          |
+|                           |
++---------------------------+
+");
+
+            Console.ResetColor();
         }
     }
 }

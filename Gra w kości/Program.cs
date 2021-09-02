@@ -12,16 +12,18 @@ namespace Gra_w_kości
     {
         static void Main(string[] args)
         {
-            string ver = "0.0.2";
+            string ver = "0.0.3";
             string path = $@"Dice_Game_{ver}.txt";
             int money = 0, bet = 0;
             
             Console.Title = $"Gra w kości by Adiks, wersja {ver}";
+            Console.ForegroundColor = ConsoleColor.Cyan;
 
             money = Class2.start(path);
 
             while (true)
             {
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine($"Stan konta: {money} AC");
                 bet = Class2.bet(money);
 
@@ -29,20 +31,24 @@ namespace Gra_w_kości
 
                 Console.WriteLine("Kliknij enter, aby rzucić kostką.");
                 Console.ReadKey();
+                Console.Clear();
 
                 int dice = random.Next(1, 7);
 
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Thread.Sleep(500);
                 Console.WriteLine("Wyrzuciłeś...");
-                Thread.Sleep(1000);
+                
+
                 int player = Class2.dice(dice);
 
-                Console.WriteLine("Rzutu dokonuje teraz komputer.");
-                Thread.Sleep(2000);
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Thread.Sleep(1500);
+                Console.WriteLine("Komputer wyrzucił...");
+                
 
                 dice = random.Next(1, 7);
-
-                Console.WriteLine("Komputer wyrzucił...");
-
+                
                 int pc = Class2.dice(dice);
 
                 money += Class2.result(player, pc, bet);
